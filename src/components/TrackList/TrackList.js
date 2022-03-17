@@ -2,16 +2,17 @@ import React from 'react';
 import Track from '../Track/Track';
 import './TrackList.css';
 
-function TrackList({tracks}) {
+function TrackList({tracks, onAdd, isRemoval, onRemove}) {
   return (
     <div className="TrackList">
         {/* <!-- You will add a map method that renders a set of Track components  --> */}
         { tracks && tracks.map((track) => (
             <Track 
               key={track.id}
-              name={track.name} 
-              artist={track.artist}
-              album={track.album}
+              track={track}
+              onAdd={onAdd}
+              isRemoval={isRemoval}
+              onRemove={onRemove}
             />
           ))
         }

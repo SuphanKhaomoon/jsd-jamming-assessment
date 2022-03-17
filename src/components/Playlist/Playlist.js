@@ -2,12 +2,16 @@ import React from 'react';
 import TrackList from '../TrackList/TrackList';
 import './Playlist.css';
 
-function Playlist() {
+function Playlist(props) {
   return (
     <div className="Playlist">
       <input defaultValue={"New Playlist"} />
       {/* <!-- Add a TrackList component --> */}
-      <TrackList />
+      <TrackList 
+        tracks={props.playlistTracks}
+        onRemove={props.onRemove}
+        isRemoval={true}
+      />
       <button className="Playlist-save">SAVE TO SPOTIFY</button>
     </div>
   );
