@@ -1,7 +1,7 @@
 import React from 'react';
 import './Track.css';
 
-function Track({isRemoval}) {
+function Track({isRemoval, name, artist, album}) {
   const renderAction = () => {
     if(isRemoval) {
       return  <button className="Track-action">-</button>;
@@ -13,8 +13,10 @@ function Track({isRemoval}) {
   return (
     <div className="Track">
       <div className="Track-information">
-        <h3>{/*<!-- track name will go here -->*/}</h3>
-        <p>{/*<!-- track artist will go here--> | <!-- track album will go here -->*/}</p>
+        {/*<!-- track name will go here -->*/}
+        <h3>{name}</h3>
+        {/*<!-- track artist will go here--> | <!-- track album will go here -->*/}
+        <p>{artist} | {album}</p>
       </div>
       {renderAction()}
     </div>
