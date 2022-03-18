@@ -2,6 +2,7 @@
 const clientId = 'bce191d1f28a45ea86989eac8b692e19';
 
 const redirectUri = 'http://suphan.surge.sh/';
+// const redirectUri = window.location.href; for deploy any website
 const spotifyUrl = `https://accounts.spotify.com/authorize?response_type=token&scope=playlist-modify-public&client_id=${clientId}&redirect_uri=${redirectUri}`;
 let accessToken = undefined;
 let expiresIn = undefined;
